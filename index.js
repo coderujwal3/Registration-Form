@@ -13,6 +13,7 @@ mongoose.connect(`mongodb+srv://nikhilsengar7012:8WmbD7qSjnI4mFql@registration-f
 const registrationSchema = new mongoose.Schema({
     name: String,
     email: String,
+    number: Number,
     password: String,
 });
 
@@ -27,13 +28,14 @@ app.get("/", (req, res) => {
 
 app.post("/register", async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, number, password } = req.body;
 
         const RegisteredUser = await Registration.findOne({ email: email });
         if (!RegisteredUser) {
             const registrationData = new Registration({
                 name,
                 email,
+                number,
                 password,
             });
             await registrationData.save();
