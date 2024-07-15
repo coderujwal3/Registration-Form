@@ -37,7 +37,7 @@ app.post("/register", async (req, res) => {
                 password,
             });
             await registrationData.save();
-            console.log("User is Registered.");
+            console.log("Successfully Registered.");
             res.redirect("/Success");
         }
         else {
