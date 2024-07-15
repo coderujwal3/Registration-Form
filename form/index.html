@@ -16,7 +16,7 @@
       padding: 0;
       height: 100vh;
       width: 100%;
-      background: rgba(0, 0, 35, 0.866);
+      background: url("https://i.imgur.com/5fQUPDl.jpeg");
       display: flex;
       justify-content: center;
       align-items: center;
@@ -25,10 +25,11 @@
     form {
       padding: 20px;
       width: 50%;
-      background: linear-gradient(120deg, #7cfaf2e1 30%, #bce82d);
-      backdrop-filter: blur(2px);
+      background-color : transparent;
+      color: white;
+      backdrop-filter: blur(6px);
       border-radius: 12px;
-      box-shadow: 10px 10px 108px black, -10px -10px 108px black;
+      box-shadow: 10px 10px 108px black, -10px -10px 108px rgb(189, 189, 189);
     }
   </style>
 
@@ -51,7 +52,7 @@
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd" name="password" minlength="6">
       </div>
-      <button type="submit" class="btn btn-outline-dark mt-3">Submit</button>
+      <button type="submit" class="btn btn-outline-light mt-3">Submit</button>
     </form>
   </main>
 </body>
