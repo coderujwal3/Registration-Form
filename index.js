@@ -6,8 +6,7 @@ const app = express();
 const port = 4444;
 
 mongoose.connect(`mongodb+srv://nikhilsengar7012:8WmbD7qSjnI4mFql@registration-form.rkyehsp.mongodb.net/`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useNewUrlParser: true
 });
 
 const registrationSchema = new mongoose.Schema({
