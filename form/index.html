@@ -38,23 +38,24 @@
     <form action="/register" method="post">
       <div class="form-group">
         <label for="name">Full Name:</label>
-        <input type="text" class="form-control" id="name" name="name">
+        <input type="text" class="form-control" id="name" name="name" required>
       </div>
       <div class="form-group mt-3">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" name="email">
+        <input type="email" class="form-control" id="email" name="email" required>
       </div>
       <div class="form-group mt-3">
         <label for="number">Mobile Number:</label>
-        <input type="number" class="form-control" id="number" name="number">
+        <input type="number" class="form-control" id="number" name="number" required>
       </div>
       <div class="form-group mt-3">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" name="password" minlength="6">
+        <input type="password" class="form-control" id="pwd" name="password" minlength="6" required>
       </div>
       <button type="submit" class="btn btn-outline-light mt-3">Submit</button>
     </form>
   </main>
+
 </body>
 
 </html>
