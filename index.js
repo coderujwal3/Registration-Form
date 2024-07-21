@@ -5,9 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 4444;
 
-mongoose.connect(`mongodb+srv://nikhilsengar7012:8WmbD7qSjnI4mFql@registration-form.rkyehsp.mongodb.net/`, {
-    useNewUrlParser: true
-});
+mongoose.connect(`mongodb+srv://nikhilsengar7012:8WmbD7qSjnI4mFql@registration-form.rkyehsp.mongodb.net/`);
 
 const registrationSchema = new mongoose.Schema({
     name: String,
@@ -22,7 +20,7 @@ app.use(bodyParser.json());
 
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname+"/form/index.html");
+    res.sendFile(__dirname + "/form/index.html");
 })
 
 app.post("/register", async (req, res) => {
@@ -53,11 +51,11 @@ app.post("/register", async (req, res) => {
 })
 
 app.get("/Success", (req, res) => {
-    res.sendFile(__dirname+"/form/Success.html");
+    res.sendFile(__dirname + "/form/Success.html");
 });
 
 app.get("/Registered", (req, res) => {
-    res.sendFile(__dirname+"/form/Registered.html");
+    res.sendFile(__dirname + "/form/Registered.html");
 });
 
 app.listen(port, () => {
